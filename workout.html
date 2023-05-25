@@ -22,452 +22,134 @@
 
 							<!-- Header -->
 								<header id="header">
+									<a href="index.html" class="logo"><strong>Home</strong></a>
 								</header>
 
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Workout</h1>
+										<h1>Work and Pyhsical Health:</h1>
+										<p>An walkththrough of my analysis and presentation</p>
 									</header>
 
 									<!-- Content -->
-										<h2 id="content">Introduction</h2>
-										<p>Regular physical exercise is crucial for maintaining a healthy lifestyle, but equally important is the practice of tracking your workouts. By keeping a record of your exercise routine, exercises performed, sets, reps, and other relevant details, you gain several benefits that can significantly enhance your fitness journey.</p>
-										<p>First and foremost, tracking your workouts helps establish a routine. When you have a documented plan and a clear record of your exercises, it becomes easier to follow a structured workout schedule. By sticking to a consistent routine, you create habits and discipline that contribute to long-term success in achieving your fitness goals.</p>
+										<h2 id="content">Introduction:</h2>
+										<p> Regular exercise and physical activity play a crucial role in maintaining a healthy lifestyle. 
+											As part of a comprehensive fitness journey, individuals often monitor and track their workout 
+											progress to assess their performance, set goals, and make informed adjustments to their routines.
+											When I moved in 2018, I realized that my health wasn’t what I’d wanted it to be. Being a 
+											little overweight, while also struggling to do the physical things I wanted to, I knew I 
+											had to make a change. Being a data driven person, there’s a near infinite amount of workout 
+											plans, coach advice, fitness standards, diets and more and I knew that with the help of data, 
+											I can find what works for me. In this data analysis project, we delve into the workout and 
+											weight data to see exercise patterns, performance trends, and overall progress.
+										<h4>Research Question:</h4>
+											The central research question driving this analysis is: How can we leverage the available workout 
+											data to gain a comprehensive understanding of the individual's exercise habits, track their progress 
+											over time, and identify areas for improvement? By exploring various aspects of the workout data, 
+											including <i>exercise type</i>, <i>intensity</i>, <i>frequency</i>, and specific <i>exercises performed</i>, we strive 
+											to extract meaningful insights that can enhance the individual's training regimen.
+											<br></br>	
+										<h4>Data Sources:</h4>
+											The primary source of data for this analysis is my personal workout log. 
+											The workout log records detailed information about each exercise session, 
+											such as the date, exercise type, duration, intensity level in the form of RPE (Rate of Perceived Exertion), 
+											and more. This rich dataset serves as a valuable resource for examining my workout and measurement
+											history and assessing my fitness journey comprehensively.
+										<br></br>
+										<h4>Why Google Sheets?</h4>
+										<p>In the context of tracking and analyzing workout data, utilizing a spreadsheet-based system like <strong>Google Sheets</strong> offers 
+											several advantages and makes it an ideal method for collecting and organizing such information. Here's an overview of why a 
+											spreadsheet was my preferred choice for maintaining a workout log:</p>
+											<ul>
+												<li><strong>Data Organization:</strong> A spreadsheet provides a structured format with rows and columns, allowing for 
+													systematic organization of workout and measurement data. Each workout event can be recorded as a row, with specific 
+													attributes such as exercise type, RPE, rest times, and notes stored in respective columns. This structure enables 
+													easy sorting, filtering, and analysis of data based on various parameters.</li>
+												<p></p>
+												<li><Strong>Ease of use:</Strong> In order to actually make use of the tracking system, it was important that the barrier to 
+													using it be as small as possible. The thought of bringing a laptop to the gym, or going for a run with my desktop in a 
+													book bag couldn’t be a possibility. Google sheets offered the best solution for me as, like many others, I’ve almost 
+													always got my phone nearby and certainly do if I’m working out. The ease of use and portability of google sheets 
+													was a big selling factor. What also made the decision easy was the ease and integration of google forms. </li>
+												<p></p>
+												<li><strong>Analysis and Visualization:</strong> Spreadsheets offer powerful data analysis and visualization capabilities, 
+													enabling me to derive insights from my workout and measurement data. I can leverage built-in functions and formulas to 
+													calculate summary statistics, identify trends, and generate charts or graphs for visual representation of progress. 
+													These analysis tools facilitate a comprehensive understanding of workout patterns, performance improvements, and areas 
+													for further development.
+												</li>
+											</ul>
+											<h2 id="content">Setup: Sheets and Forms</h2>
+											<div class="row">
+											<h3 >Creating Forms</h3>
+													<p><span class="image right"><img src="images/workout/Sheets_Form2.png" height='200'alt="Drop down tap for Forms" /></span> Google Sheets and Forms working 
+														together offer a comprehensive solution for data collection, organization, analysis, and collaboration. The seamless 
+														integration between these two tools enhances productivity, promotes real-time collaboration, and simplifies the 
+														entire data management process. Whether it's conducting surveys, gathering feedback, or analyzing data, the combination 
+														of Google Sheets and Forms provides a versatile platform for effective data-driven decision-making. Creating and pairing a 
+													    Form is as easy as clicking from a dropdown menu. Once a form is created and connected to a sheet, all submitted responses
+													will be automatically populated in the sheet with an associated timestamp. </p>
+														<div class="col-4"><span class="image fit"><img src="images/workout/Form1.png" alt="Empty Form" /></span></div>
+														<div class="col-4"><span class="image fit"><img src="images/workout/Form2.png" alt="Filled Form" /></span></div>
+														<div class="col-4"><span class="image fit"><img src="images/workout/Data.png" alt="Weight Data" /></span></div>
+											<h3>Ease of use</h3>
+													<p><span class="image left"><img src="images/Workout/Form_Phone.png" height="250" alt="Phone Screen" /></span> Like most people, I often 
+														find myself without immediate access to my computer, but I almost always have my phone within reach. One of the primary factors that 
+														led me to choose Google Sheets and Forms for tracking and analyzing my workout data is their exceptional mobile usability. By setting 
+														up a direct link to my custom form as an icon on my phone's home screen, I significantly streamlined the process of inputting data, 
+														disregarding the added advantage of having my personalized tracking icons readily visible throughout the day. This convenient 
+														setup not only acted as a tremendous source of motivation but also served as a constant reminder to prioritize and maintain my fitness routine.
+													</p>
+
+											<h2> So What Do We Do With This Data?</h2>
+												<p> This analysis could go in a hundred different directions. From tracking the program over time, to strength gains, to specifics like how difficult do I rate an exercise that I did consistently over time. Ultimately there are two things I’d like to highlight here for demonstrating purposes, but know that the data goes a lot deeper. 
+												</p>
+												<ol>
+												<li>	<strong>Weight</strong>. Being overweight at the time, tracking weight was a reasonable proxy that everything was working as intended. Weight loss or gain can be an indicator of the effectiveness of the program, dietary changes, or overall lifestyle modifications. If the weight weren’t coming down then it’d be time to dive in further and analyze the “why’s” or “why not’s” of my weight loss journey. Weight is a straightforward metric to measure and It provides a tangible and quantifiable measurement of progress.
+												</li>	
+												<p></p>
+												<li>	<strong>Pull ups</strong>. To go back to 2018 when I moved and decided to make some changes. Before I’d moved, I remember a time when I was hanging out with some friends and we were testing our physical capabilities. Push ups, sit-ups, etc. When it was my time to test out my pull ups, I grabbed the bar and couldn’t manage to lift myself even a few centimeters from my hanging position. I was mortified. As I started my fitness journey, pull-ups became the status symbol of great strength. People who could throw themselves up to the bar with ease, in my mind, had demonstrated such a mastery of their strength and body that the ability to replicate that became my goal. 
+												</li>	
+											</ol>
+											<!-- Preformatted Code -->			
 											
-										<p>	Tracking your workouts also allows you to monitor progress and make informed adjustments. By keeping a record of your exercises, sets, and reps, you can objectively assess your performance over time. This information helps you identify patterns, track improvements, and set realistic goals. You can gradually increase the intensity, challenge yourself with new exercises, or adjust your training volume based on the data you have accumulated. This data-driven approach ensures that you are continually pushing yourself and making progress.
-											
-											Additionally, tracking your workouts helps you maintain accountability and motivation. Having a visual representation of your efforts can be inspiring and encouraging. When you see the progress you have made or notice areas that need improvement, it fuels your motivation to keep going. It also provides a sense of accomplishment as you check off completed workouts and milestones.
-											
-											Another advantage of tracking workouts is the ability to identify potential areas of weakness or imbalances. By reviewing your exercise history, you can pinpoint exercises or muscle groups that may require more attention. This knowledge allows you to design targeted workouts and address any muscle imbalances, reducing the risk of injuries and enhancing overall strength and functionality.
-											
-											Furthermore, tracking your workouts creates a sense of satisfaction and fulfillment. It provides a tangible representation of the effort you have put into your fitness journey. The ability to look back at your progress, overcome challenges, and achieve personal records is incredibly rewarding and serves as a source of motivation to continue pushing yourself.
-											
-											In conclusion, the importance of working out goes hand in hand with the importance of tracking your workouts. By documenting your routine, exercises, sets, reps, and other relevant details, you establish a structured routine, monitor progress, maintain accountability, identify areas for improvement, and derive a sense of accomplishment. So, embrace the practice of tracking your workouts, and witness the positive impact it can have on your fitness journey.</p>
-										
-										<div class="row">
-											<div class="col-6 col-6-small">
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Sets -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-													<p></p>
-													<select name="demo-category" id="demo-category">
-														<option value="">- Reps -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-											</div>
-											<div class="col-6 col-12-small">
-												<select name="demo-category" id="demo-category">
-													<option value="">- Rate of Percieved Exertion -</option>
-													<option value="1">1</option>
-													<option value="1">2</option>
-													<option value="1">3</option>
-													<option value="1">4</option>
-													<option value="1">5</option>
-												</select>
-												<h3>Magna odio tempus commodo</h3>
-												<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor. Ante commodo blandit adipiscing integer semper orci eget. Faucibus commodo adipiscing mi eu nullam accumsan morbi arcu ornare odio mi adipiscing nascetur lacus ac interdum morbi accumsan vis mi accumsan.</p>
-											</div>
-											<!-- Break -->
-											<div class="col-4 col-12-medium">
-												<h3>Interdum sapien gravida</h3>
-												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
-											</div>
-											<div class="col-4 col-12-medium">
-												<h3>Faucibus consequat lorem</h3>
-												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
-											</div>
-											<div class="col-4 col-12-medium">
-												<h3>Accumsan montes viverra</h3>
-												<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit.</p>
-											</div>
 										</div>
 
 									<hr class="major" />
-
 									<!-- Elements -->
-										<h2 id="elements">Elements</h2>
+										<h2 id="elements">Analyzing the Data</h2>
 										<div class="row gtr-200">
 											<div class="col-6 col-12-medium">
 
 												<!-- Text stuff -->
-													<h3>Text</h3>
-													<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-													This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-													This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>.
-													Finally, this is a <a href="#">link</a>.</p>
-													<hr />
-													<h2>Heading Level 2</h2>
-													<h3>Heading Level 3</h3>
-													<h4>Heading Level 4</h4>
-													<hr />
-													<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-
-												<!-- Lists -->
-													<h3>Lists</h3>
-													<div class="row">
-														<div class="col-6 col-12-small">
-
-															<h4>Unordered</h4>
-															<ul>
-																<li>Dolor etiam magna etiam.</li>
-																<li>Sagittis lorem eleifend.</li>
-																<li>Felis dolore viverra.</li>
-															</ul>
-
-															<h4>Alternate</h4>
-															<ul class="alt">
-																<li>Dolor etiam magna etiam.</li>
-																<li>Sagittis lorem eleifend.</li>
-																<li>Felis feugiat viverra.</li>
-															</ul>
-
-														</div>
-														<div class="col-6 col-12-small">
-
-															<h4>Ordered</h4>
-															<ol>
-																<li>Dolor etiam magna etiam.</li>
-																<li>Etiam vel lorem sed viverra.</li>
-																<li>Felis dolore viverra.</li>
-																<li>Dolor etiam magna etiam.</li>
-																<li>Etiam vel lorem sed viverra.</li>
-																<li>Felis dolore viverra.</li>
-															</ol>
-
-															<h4>Icons</h4>
-															<ul class="icons">
-																<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-																<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-																<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-																<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-																<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-																<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-															</ul>
-
-														</div>
-													</div>
-													<h4>Definition</h4>
-													<dl>
-														<dt>Item1</dt>
-														<dd>
-															<p>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor.</p>
-														</dd>
-														<dt>Item2</dt>
-														<dd>
-															<p>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor.</p>
-														</dd>
-														<dt>Item3</dt>
-														<dd>
-															<p>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor.</p>
-														</dd>
-													</dl>
-
-													<h4>Actions</h4>
-													<ul class="actions">
-														<li><a href="#" class="button primary">Default</a></li>
-														<li><a href="#" class="button">Default</a></li>
-													</ul>
-													<ul class="actions small">
-														<li><a href="#" class="button primary small">Small</a></li>
-														<li><a href="#" class="button small">Small</a></li>
-													</ul>
-													<div class="row">
-														<div class="col-6 col-12-small">
-															<ul class="actions stacked">
-																<li><a href="#" class="button primary">Default</a></li>
-																<li><a href="#" class="button">Default</a></li>
-															</ul>
-														</div>
-														<div class="col-6 col-12-small">
-															<ul class="actions stacked">
-																<li><a href="#" class="button primary small">Small</a></li>
-																<li><a href="#" class="button small">Small</a></li>
-															</ul>
-														</div>
-														<div class="col-6 col-12-small">
-															<ul class="actions stacked">
-																<li><a href="#" class="button primary fit">Default</a></li>
-																<li><a href="#" class="button fit">Default</a></li>
-															</ul>
-														</div>
-														<div class="col-6 col-12-small">
-															<ul class="actions stacked">
-																<li><a href="#" class="button primary small fit">Small</a></li>
-																<li><a href="#" class="button small fit">Small</a></li>
-															</ul>
-														</div>
-													</div>
-
-													<h4>Pagination</h4>
-													<ul class="pagination">
-														<li><span class="button disabled">Prev</span></li>
-														<li><a href="#" class="page active">1</a></li>
-														<li><a href="#" class="page">2</a></li>
-														<li><a href="#" class="page">3</a></li>
-														<li><span>&hellip;</span></li>
-														<li><a href="#" class="page">8</a></li>
-														<li><a href="#" class="page">9</a></li>
-														<li><a href="#" class="page">10</a></li>
-														<li><a href="#" class="button">Next</a></li>
-													</ul>
-
-												<!-- Blockquote -->
-													<h3>Blockquote</h3>
-													<blockquote>Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.</blockquote>
-
-												<!-- Table -->
-													<h3>Table</h3>
-
-													<h4>Default</h4>
-													<div class="table-wrapper">
-														<table>
-															<thead>
-																<tr>
-																	<th>Name</th>
-																	<th>Description</th>
-																	<th>Price</th>
-																</tr>
-															</thead>
-															<tbody>
-																<tr>
-																	<td>Item1</td>
-																	<td>Ante turpis integer aliquet porttitor.</td>
-																	<td>29.99</td>
-																</tr>
-																<tr>
-																	<td>Item2</td>
-																	<td>Vis ac commodo adipiscing arcu aliquet.</td>
-																	<td>19.99</td>
-																</tr>
-																<tr>
-																	<td>Item3</td>
-																	<td> Morbi faucibus arcu accumsan lorem.</td>
-																	<td>29.99</td>
-																</tr>
-																<tr>
-																	<td>Item4</td>
-																	<td>Vitae integer tempus condimentum.</td>
-																	<td>19.99</td>
-																</tr>
-																<tr>
-																	<td>Item5</td>
-																	<td>Ante turpis integer aliquet porttitor.</td>
-																	<td>29.99</td>
-																</tr>
-															</tbody>
-															<tfoot>
-																<tr>
-																	<td colspan="2"></td>
-																	<td>100.00</td>
-																</tr>
-															</tfoot>
-														</table>
-													</div>
-
-													<h4>Alternate</h4>
-													<div class="table-wrapper">
-														<table class="alt">
-															<thead>
-																<tr>
-																	<th>Name</th>
-																	<th>Description</th>
-																	<th>Price</th>
-																</tr>
-															</thead>
-															<tbody>
-																<tr>
-																	<td>Item1</td>
-																	<td>Ante turpis integer aliquet porttitor.</td>
-																	<td>29.99</td>
-																</tr>
-																<tr>
-																	<td>Item2</td>
-																	<td>Vis ac commodo adipiscing arcu aliquet.</td>
-																	<td>19.99</td>
-																</tr>
-																<tr>
-																	<td>Item3</td>
-																	<td> Morbi faucibus arcu accumsan lorem.</td>
-																	<td>29.99</td>
-																</tr>
-																<tr>
-																	<td>Item4</td>
-																	<td>Vitae integer tempus condimentum.</td>
-																	<td>19.99</td>
-																</tr>
-																<tr>
-																	<td>Item5</td>
-																	<td>Ante turpis integer aliquet porttitor.</td>
-																	<td>29.99</td>
-																</tr>
-															</tbody>
-															<tfoot>
-																<tr>
-																	<td colspan="2"></td>
-																	<td>100.00</td>
-																</tr>
-															</tfoot>
-														</table>
-													</div>
-
+												<h2>Weight</h2>
+												<p><span class="image left"><img src="images/Workout/Weight.png"  alt="Phone Screen" /></span> Like most people, I don’t 
+													walk around with my computer handy at all times. However, also, like most people, I almost always have my phone with me. 
+													One of the reasons I chose Google Sheets and Forms is the ease of use for inputting data on mobile. Setting up the link to 
+													my form as an icon I can throw on my phone’s home screen made inputting data significantly easier - ignoring the benefits of 
+													seeing my tracking icons in front of my face all day serving as a great motivator and reminder that I need to workout.
+												</p>
+														
 											</div>
 											<div class="col-6 col-12-medium">
-
-												<!-- Buttons -->
-													<h3>Buttons</h3>
-													<ul class="actions">
-														<li><a href="#" class="button primary">Primary</a></li>
-														<li><a href="#" class="button">Default</a></li>
-													</ul>
-													<ul class="actions">
-														<li><a href="#" class="button large">Large</a></li>
-														<li><a href="#" class="button">Default</a></li>
-														<li><a href="#" class="button small">Small</a></li>
-													</ul>
-													<ul class="actions">
-														<li><a href="#" class="button primary large">Large</a></li>
-														<li><a href="#" class="button primary">Default</a></li>
-														<li><a href="#" class="button primary small">Small</a></li>
-													</ul>
-													<ul class="actions fit">
-														<li><a href="#" class="button primary fit">Fit</a></li>
-														<li><a href="#" class="button fit">Fit</a></li>
-													</ul>
-													<ul class="actions fit small">
-														<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-														<li><a href="#" class="button fit small">Fit + Small</a></li>
-													</ul>
-													<ul class="actions">
-														<li><a href="#" class="button primary icon solid fa-search">Icon</a></li>
-														<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-													</ul>
-													<ul class="actions">
-														<li><span class="button primary disabled">Primary</span></li>
-														<li><span class="button disabled">Default</span></li>
-													</ul>
-
 												<!-- Form -->
-													<h3>Form</h3>
-
-													<form method="post" action="#">
-														<div class="row gtr-uniform">
-															<div class="col-6 col-12-xsmall">
-																<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-															</div>
-															<div class="col-6 col-12-xsmall">
-																<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-															</div>
-															<!-- Break -->
-															<div class="col-12">
-																<select name="demo-category" id="demo-category">
-																	<option value="">- Category -</option>
-																	<option value="1">Manufacturing</option>
-																	<option value="1">Shipping</option>
-																	<option value="1">Administration</option>
-																	<option value="1">Human Resources</option>
-																</select>
-															</div>
-															<div class="col-12">
-																<select name="demo-category" id="demo-category">
-																	<option value="">- Category -</option>
-																	<option value="1">Manufacturing</option>
-																	<option value="1">Shipping</option>
-																	<option value="1">Administration</option>
-																	<option value="1">Human Resources</option>
-																</select>
-															</div>
-															<!-- Break -->
-															<div class="col-4 col-12-small">
-																<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-																<label for="demo-priority-low">Low</label>
-															</div>
-															<div class="col-4 col-12-small">
-																<input type="radio" id="demo-priority-normal" name="demo-priority">
-																<label for="demo-priority-normal">Normal</label>
-															</div>
-															<div class="col-4 col-12-small">
-																<input type="radio" id="demo-priority-high" name="demo-priority">
-																<label for="demo-priority-high">High</label>
-															</div>
-															<!-- Break -->
-															<div class="col-6 col-12-small">
-																<input type="checkbox" id="demo-copy" name="demo-copy">
-																<label for="demo-copy">Email me a copy</label>
-															</div>
-															<div class="col-6 col-12-small">
-																<input type="checkbox" id="demo-human" name="demo-human" checked>
-																<label for="demo-human">I am a human</label>
-															</div>
-															<!-- Break -->
-															<div class="col-12">
-																<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-															</div>
-															<!-- Break -->
-															<div class="col-12">
-																<ul class="actions">
-																	<li><input type="submit" value="Send Message" class="primary" /></li>
-																	<li><input type="reset" value="Reset" /></li>
-																</ul>
-															</div>
-														</div>
-													</form>
-
-												<!-- Image -->
-													<h3>Image</h3>
-
-													<h4>Fit</h4>
-													<span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
-													<div class="box alt">
-														<div class="row gtr-50 gtr-uniform">
-															<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-															<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-															<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-															<!-- Break -->
-															<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-															<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-															<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-															<!-- Break -->
-															<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-															<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-															<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-														</div>
-													</div>
-
-													<h4>Left &amp; Right</h4>
-													<p><span class="image left"><img src="images/pic01.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-													<p><span class="image right"><img src="images/pic02.jpg" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-
-												<!-- Box -->
-													<h3>Box</h3>
-													<div class="box">
-														<p>Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum.</p>
-													</div>
-
-												<!-- Preformatted Code -->
-													<h3>Preformatted</h3>
-													<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';
-</code></pre>
-
+												<h2>Pull Ups</h2>
+												<p><span class="image right"><img src="images/Workout/Pull_ups_1.png"  alt="Phone Screen" /></span> Like most people, I don’t 
+													walk around with my computer handy at all times. However, also, like most people, I almost always have my phone with me. 
+													One of the reasons I chose Google Sheets and Forms is the ease of use for inputting data on mobile. Setting up the link to 
+													my form as an icon I can throw on my phone’s home screen made inputting data significantly easier - ignoring the benefits of 
+													seeing my tracking icons in front of my face all day serving as a great motivator and reminder that I need to workout.
+												
 											</div>
 										</div>
+									</p>
+									<p>walk around with my computer handy at all times. However, also, like most people, I almost always have my phone with me. 
+										One of the reasons I chose Google Sheets and Forms is the ease of use for inputting data on mobile. Setting up the link to 
+										my form as an icon I can throw on my phone’s home screen made inputting data significantly easier - ignoring the benefits of 
+										seeing my tracking icons in front of my face all day serving as a grea!</p>
+									<pre>test<code>=SUM(REGEXREPLACE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(A2, "+", " "), "?", ""), "-", " "), "\([^()]*\)", ""))</code></pre>
+									
 
 								</section>
 

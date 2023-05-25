@@ -27,6 +27,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+apple {
+  tab-size: 4;
+}
+
 body {
   line-height: 1; }
 
@@ -128,7 +132,7 @@ em, i {
   font-style: italic; }
 
 p {
-  margin: 0 0 2em 0; }
+  margin: 0 0 2em 0;}
 
 h1, h2, h3, h4, h5, h6 {
   color: #3d4449;
